@@ -5,6 +5,8 @@ Original written by Michael Musso https://github.com/LynX39 (https://github.com/
 ###Update
 
 Changed each() to foreach -> each() DEPRECATED in PHP 7.2 
+
+Fix issue if tcpdf class already exists.
   
 ## Installation
 
@@ -12,21 +14,21 @@ Changed each() to foreach -> each() DEPRECATED in PHP 7.2
 
 Require this package in your composer.json and update composer.
 
-    "rfookune/lara-pdf-merger-php-7-2": "dev-master",
+    "rainstreamweb/lara-pdf-merger-php-7-2": "dev-master",
 
 After updating composer, add the ServiceProvider to the providers array in config/app.php
 
-    LynX39\LaraPdfMerger\PdfMergerServiceProvider::class,
+    Rainstreamweb\LaraPdfMerger\PdfMergerServiceProvider::class,
 
 You can optionally use the facade for shorter code. Add this to your facades:
 
-    'PdfMerger' => LynX39\LaraPdfMerger\Facades\PdfMerger::class,
+    'PdfMerger' => Rainstreamweb\LaraPdfMerger\Facades\PdfMerger::class,
     
 ## Using
 
 ```php
 
-$pdf = new LynX39\LaraPdfMerger\PdfManage;
+$pdf = new Rainstreamweb\LaraPdfMerger\PdfManage;
 
 $pdf->addPDF('samplepdfs/one.pdf', '1, 3, 4');
 $pdf->addPDF('samplepdfs/two.pdf', '1-2');

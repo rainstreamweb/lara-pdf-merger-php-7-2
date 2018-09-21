@@ -1,6 +1,6 @@
 <?php 
 
-namespace Nextek\LaraPdfMerger;
+namespace Rainstreamweb\LaraPdfMerger;
 
 use Illuminate\Support\ServiceProvider;
 
