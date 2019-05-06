@@ -17,6 +17,7 @@
 //  limitations under the License.
 //
 
+if(!class_exists('FPDF_TPL'))
 class FPDF_TPL extends FPDF {
     /**
      * Array of Tpl-Data

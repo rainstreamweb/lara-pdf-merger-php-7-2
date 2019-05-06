@@ -19,13 +19,14 @@
 //
 
 // Dummy shim to allow unmodified use of fpdf_tpl
-class FPDF extends TCPDF {}
+if(!class_exists('FPDF'))
+    class FPDF extends TCPDF {}
 
 require_once('fpdf_tpl.php');
 
 require_once('tcpdi_parser.php');
 
-
+if(!class_exists('TCPDI'))
 class TCPDI extends FPDF_TPL {
     /**
      * Actual filename
